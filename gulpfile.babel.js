@@ -12,6 +12,7 @@ import plugins from 'gulp-load-plugins';
 import runSequence from 'run-sequence';
 
 import server from "browser-sync";
+import sass from "gulp-sass";
 
 const browserSync = server.create();
 
@@ -23,6 +24,8 @@ import modernizr from 'modernizr';
 
 import pkg from './package.json';
 import modernizrConfig from './modernizr-config.json';
+
+
 
 
 const dirs = pkg['h5bp-configs'].directories;
@@ -82,11 +85,12 @@ gulp.task('clean', (done) => {
 gulp.task('copy', [
   'copy:.htaccess',
   'copy:index.html',
-  'copy:jquery',
+/*   'copy:jquery', */
   'copy:license',
-  'copy:main.css',
+/*   'copy:main.css', */
+  'sass',
   'copy:misc',
-  'copy:normalize'
+/*   'copy:normalize' */
 ]);
 
 gulp.task('copy:.htaccess', () =>
@@ -96,17 +100,17 @@ gulp.task('copy:.htaccess', () =>
 );
 
 gulp.task('copy:index.html', () => {
-  const hash = ssri.fromData(
+/*   const hash = ssri.fromData(
     fs.readFileSync('node_modules/jquery/dist/jquery.min.js'),
     { algorithms: ['sha256'] }
   );
   let version = pkg.devDependencies.jquery;
-  let modernizrVersion = pkg.devDependencies.modernizr;
+  let modernizrVersion = pkg.devDependencies.modernizr; */
 
   gulp.src(`${dirs.src}/index.html`)
-    .pipe(plugins().replace(/{{JQUERY_VERSION}}/g, version))
+/*     .pipe(plugins().replace(/{{JQUERY_VERSION}}/g, version))
     .pipe(plugins().replace(/{{MODERNIZR_VERSION}}/g, modernizrVersion))
-    .pipe(plugins().replace(/{{JQUERY_SRI_HASH}}/g, hash.toString()))
+    .pipe(plugins().replace(/{{JQUERY_SRI_HASH}}/g, hash.toString())) */
     .pipe(gulp.dest(dirs.dist));
 });
 
@@ -131,6 +135,12 @@ gulp.task('copy:main.css', () => {
       browsers: ['last 2 versions', 'ie >= 9', '> 1%'],
       cascade: false
     }))
+    .pipe(gulp.dest(`${dirs.dist}/css`));
+});
+
+gulp.task('sass', function () {
+  return gulp.src('./src/sass/**/*.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest(`${dirs.dist}/css`));
 });
 
@@ -169,7 +179,7 @@ gulp.task('modernizr', (done) => {
 gulp.task('lint:js', () =>
   gulp.src([
     'gulpfile.js',
-    `${dirs.src}/js/*.js`,
+    `${dirs.src}/js/main.js`,
     `${dirs.test}/*.js`
   ]).pipe(plugins().jscs())
     .pipe(plugins().eslint())
@@ -192,7 +202,7 @@ gulp.task('archive', (done) => {
 gulp.task('build', (done) => {
   runSequence(
     ['clean', 'lint:js'],
-    'copy', 'modernizr',
+    'copy', /* 'modernizr', */
     done);
 });
 
@@ -215,7 +225,7 @@ gulp.task('default', ['build'], function () {
 
   // add browserSync.reload to the tasks array to make
   // all browsers reload after tasks are complete.
-  gulp.watch("src/*.*", ['js-watch']);
+  gulp.watch("src/**/*", ['js-watch']);
 });
 
 //gulp.task('default', ['build']);
