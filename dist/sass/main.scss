@@ -514,7 +514,6 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     -moz-perspective: 500px;
     perspective: 500px;
     height: 100vh;
-    background: rgba(255, 169, 179, 0.1);
     position: relative;
     z-index: -100;
 }
@@ -527,9 +526,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 #section4,
 #section5,
 #section6 {
-    width: 50vw;
+    width: 70vw;
     min-width: 300px;
     height: 60vh;
     position: absolute;
-    background: rgba(255, 255, 255, 0.6);
 }
