@@ -519,6 +519,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 #xiuli {
     transition-timing-function: linear;
+    
 }
 #section1,
 #section2,
@@ -530,4 +531,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     min-width: 300px;
     height: 60vh;
     position: absolute;
+    div{
+        width: 100%;
+    }
 }
