@@ -13,23 +13,44 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/main.css">
+  <link href="css/fontawesome-all.min.css" rel="stylesheet">
 </head>
 
 <body>
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-right">
+        <i class="fab fa-linkedin w3-xlarge"></i>
+      </a>
+      <a class="w3-bar-item w3-button w3-right">
+        <i class="fab fa-github w3-xlarge"></i>
+      </a>
+      <a class="w3-bar-item w3-button w3-right">
+        <i class="fab fa-gitlab w3-xlarge"></i>
+      </a>
+      <a class="w3-bar-item w3-button w3-right">
+        <i class="fab fa-stack-overflow w3-xlarge"></i>
+      </a>
+      <a class="w3-bar-item w3-button w3-right">
+        <i class="fas fa-envelope w3-xlarge"></i>
+      </a>
+    </div>
+  </div>
   <div id="root" style="background: black">
     <div id="xiuli">
       <div id="section1" data-xiuli class="w3-display-container w3-center">
         <div class="w3-display-middle">
           <h1>Hello, I'm Shanil</h1>
-          <h2>An innovative Software Engineer</h2>
+          <div class="typewriter">
+            <h2>An innovative Software Engineer</h2>
+          </div>
         </div>
       </div>
-      <div id="section2" data-xiuli class="w3-display-container w3-round-xxlarge">
-        <div class="w3-display-middle w3-center">
-          <h1>Projects</h1>
+      <div id="section2" data-xiuli class="w3-display-container w3-center">
+        <div class="w3-display-middle">
           <div class="w3-content">
             <div class="mySlides w3-container w3-animate-bottom">
               <h2>
@@ -38,7 +59,13 @@
               <p>
                 A prototype of human-to-machine 3D interaction.The interaction framework provides the users an innovative 3D workstation
                 which comprises an array of 3D virtual dashboards.
+                <button class="w3-button w3-border w3-small">More ...</button>
               </p>
+
+              <button class="w3-button">
+                <i class="fab fa-github w3-xxlarge"></i>
+              </button>
+
             </div>
 
             <div class="mySlides w3-container w3-animate-bottom">
@@ -48,30 +75,43 @@
               <p>
                 A prototype of human-to-machine 3D interaction.The interaction framework provides the users an innovative 3D workstation
                 which comprises an array of 3D virtual dashboards.
+                <button class="w3-button w3-border w3-small">More ...</button>
               </p>
+              <button class="w3-button">
+                <i class="fab fa-github w3-xxlarge"></i>
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <div id="section3" data-xiuli class="w3-padding w3-center w3-round-xxlarge">
-        <p style="font-size: 5vh;">Bring your awesome website, Let Xiuli make it
-          <span style="font-size: 8vh;">Super Awesome</span>
+      <div id="section3" data-xiuli class="w3-center">
+        <p>Bring your awesome website, Let Xiuli make it
+          <span>Super Awesome</span>
         </p>
       </div>
-      <div id="section4" data-xiuli class="w3-padding w3-center w3-round-xxlarge">
-        <p style="font-size: 5vh">You design using well known
-          <span style="font-size: 8vh">CSS</span> stylings and let
-          <span style="font-size: 8vh">Xiuli</span> translate it for you
-        </p>
+      <div id="section4" data-xiuli class="w3-center">
+        <div class="w3-row">
+          <div class="w3-container w3-half">
+            <p>
+              Hi, I'm a Lead Software Developer with 2+ years of experience in Full-Stack software designing and development.
+            </p>
+          </div>
+          <div class="w3-container w3-half">
+            <p>
+              Hi, I'm a Lead Software Developer with 2+ years of experience in Full-Stack software designing and development.
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
   <div class="w3-bottom w3-center">
     <div class="w3-bar w3-black w3-card">
       <a id="btn1" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-      <a id="btn2" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECTS</a>
-      <a id="btn3" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BLOG</a>
-      <a id="btn4" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT ME</a>
+      <a id="btn2" class="w3-bar-item w3-button w3-padding-large">PROJECTS</a>
+      <a id="btn3" class="w3-bar-item w3-button w3-padding-large">BLOG</a>
+      <a id="btn4" class="w3-bar-item w3-button w3-padding-large">ABOUT ME</a>
     </div>
   </div>
   <script type="text/javascript" src="js/xiuli.min.js"></script>

@@ -139,10 +139,20 @@ gulp.task('copy:main.css', () => {
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./src/sass/**/*.scss')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(gulp.dest(`${dirs.dist}/css`));
+  gulp.src([`${dirs.src}/sass/main.scss`, `${dirs.src}/sass/blog.scss`])
+      .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+      .pipe(plugins().autoprefixer({
+          browsers: ['last 2 versions', 'ie >= 9', '> 1%'],
+          cascade: false
+      }))
+      .pipe(gulp.dest(`${dirs.dist}/css`));
 });
+
+//gulp.task('sass', function () {
+//  return gulp.src('./src/sass/**/*.scss')
+//    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+//    .pipe(gulp.dest(`${dirs.dist}/css`));
+//});
 
 gulp.task('copy:misc', () =>
   gulp.src([

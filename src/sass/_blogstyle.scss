@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v15-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+         url('../fonts/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/open-sans-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/open-sans-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/open-sans-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/open-sans-v15-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+  }
+
+  body,
+  html {
+      font-family: 'Open Sans', sans-serif;
+  }
+
+  .w3-bar .w3-button {
+      padding: 16px;
+  }
+
+@keyframes example1 {
+    from {transform: rotate3d(1,1,1,0deg);}
+    to {transform: rotate3d(1,1,1,360deg);}
+}
+
+@keyframes example2 {
+    from {transform: rotate3d(1,1,1,360deg);}
+    to {transform: rotate3d(1,1,1,0deg);}
+}
+
+.icons1{
+    transform-style: preserve-3d;
+    animation: example1 10s linear 0s infinite;
+    position:absolute;
+}
+.icons2{
+    transform-style: preserve-3d;
+    animation: example2 10s linear 0s infinite;
+    position:absolute;
+}
+
+.cpbtn{
+    margin: 8px;
+}

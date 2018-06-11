@@ -1,0 +1,201 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>My Contribution</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <meta name="theme-color" content="#4441AB">
+    <link rel="stylesheet" href="../../css/blog.css">
+</head>
+
+<body class="w3-theme-l4">
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <div class="w3-content" style="max-width:1400px">
+        <div class="w3-top w3-theme">
+            <div class="w3-bar w3-card w3-left-align w3-large">
+
+                <a href="../" class="w3-bar-item w3-padding-large">
+                    <img src="../../img/profile_pic50x50.png" class="w3-circle">
+                    <b class="w3-hide-small w3-hover-opacity">My Contributions</b>
+                </a>
+                <div class="w3-xlarge w3-right w3-padding-large">
+                    <i class="fab fa-github w3-hover-opacity w3-padding w3-bar-item"></i>
+                    <i class="fab fa-twitter w3-hover-opacity w3-padding w3-bar-item"></i>
+                    <i class="fab fa-linkedin w3-hover-opacity w3-padding w3-bar-item"></i>
+                </div>
+            </div>
+
+            <!-- Navbar on small screens -->
+            <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+                <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+            </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="w3-row" style="padding:96px 16px">
+
+            <!-- Blog entries -->
+            <div class="w3-col l9 s12">
+                <!-- Blog entry -->
+                <div class="w3-card-4 w3-margin w3-white">
+                    <div class="w3-container">
+                        <h3>
+                            <b>A Cross-browser solution to access CSS
+                                <code class="w3-codespan">transition</code> in javascript</b>
+                        </h3>
+                        <h5>
+                            <span class="w3-opacity">Januray 3, 2018</span>
+                        </h5>
+                    </div>
+
+                    <div class="w3-container">
+                        <p>
+                            <b>Issue :</b>&nbsp;&nbsp;The
+                            <code class="w3-codespan">transition</code> return empty in some browsers.</p>
+
+                        <p>
+                            <b>Solution :</b>&nbsp;&nbsp;Access each
+                            <code class="w3-codespan">transition</code> property seperatly as follows.
+                        </p>
+                        <div class="w3-display-container">
+                            <button class="w3-button w3-white w3-border cpbtn w3-display-topright" data-clipboard-target="#code1">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <div class="w3-small w3-theme-l5" style="overflow-x: scroll">
+                                <pre id="code1" class="javascript" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000066; font-weight: bold;">function</span> getCSSStyles<span style="color: #009900;">&#40;</span>el<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #000066; font-weight: bold;">var</span> style <span style="color: #339933;">=</span> getComputedStyle<span style="color: #009900;">&#40;</span>el<span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">null</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #000066; font-weight: bold;">var</span> result <span style="color: #339933;">=</span> <span style="color: #009900;">&#123;</span><span style="color: #009900;">&#125;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #000066; font-weight: bold;">for</span> <span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">var</span> _len <span style="color: #339933;">=</span> arguments.<span style="color: #660066;">length</span><span style="color: #339933;">,</span> properties <span style="color: #339933;">=</span> <span style="">Array</span><span style="color: #009900;">&#40;</span>_len <span style="color: #339933;">&gt;</span> <span style="color: #CC0000;">1</span> <span style="color: #339933;">?</span> _len <span style="color: #339933;">-</span> <span style="color: #CC0000;">1</span> <span style="color: #339933;">:</span> <span style="color: #CC0000;">0</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> _key <span style="color: #339933;">=</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">;</span> _key <span style="color: #339933;">&lt;</span> _len<span style="color: #339933;">;</span> _key<span style="color: #339933;">++</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  properties<span style="color: #009900;">&#91;</span>_key <span style="color: #339933;">-</span> <span style="color: #CC0000;">1</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> arguments<span style="color: #009900;">&#91;</span>_key<span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> properties.<span style="color: #660066;">forEach</span><span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>value<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  <span style="color: #000066; font-weight: bold;">var</span> property <span style="color: #339933;">=</span> style.<span style="color: #660066;">getPropertyValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'-webkit-'</span> <span style="color: #339933;">+</span> value<span style="color: #009900;">&#41;</span> <span style="color: #339933;">||</span> style.<span style="color: #660066;">getPropertyValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'-moz-'</span> <span style="color: #339933;">+</span> value<span style="color: #009900;">&#41;</span> <span style="color: #339933;">||</span> style.<span style="color: #660066;">getPropertyValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'-ms-'</span> <span style="color: #339933;">+</span> value<span style="color: #009900;">&#41;</span> <span style="color: #339933;">||</span> style.<span style="color: #660066;">getPropertyValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'-o-'</span> <span style="color: #339933;">+</span> value<span style="color: #009900;">&#41;</span> <span style="color: #339933;">||</span> style.<span style="color: #660066;">getPropertyValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">''</span> <span style="color: #339933;">+</span> value<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  result<span style="color: #009900;">&#91;</span>value<span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> property<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #000066; font-weight: bold;">return</span> result<span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000066; font-weight: bold;">var</span> xiuli <span style="color: #339933;">=</span> document.<span style="color: #660066;">getElementById</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'xiuli'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000066; font-weight: bold;">var</span> trans <span style="color: #339933;">=</span> getCSSStyles<span style="color: #009900;">&#40;</span>xiuli<span style="color: #339933;">,</span> <span style="color: #3366CC;">'transition-property'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'transition-duration'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'transition-timing-function'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'transition-delay'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li></ol></pre>
+                            </div>
+                        </div>
+
+                        <p> If you want still needs the shorthand
+                            <code class="w3-codespan">transition</code>, change
+                            <code class="w3-codespan">getCSSStyles</code> function as follows </p>
+                        <div class="w3-display-container">
+                            <button class="w3-button w3-white w3-border cpbtn w3-display-topright" data-clipboard-target="#code2">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <div class="w3-small w3-theme-l5" style="overflow-x: scroll">
+                                <pre id="code2" class="javascript" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000066; font-weight: bold;">function</span> getCSSStyles<span style="color: #009900;">&#40;</span>el<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #000066; font-weight: bold;">var</span> style <span style="color: #339933;">=</span> getComputedStyle<span style="color: #009900;">&#40;</span>el<span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">null</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #000066; font-weight: bold;">var</span> result <span style="color: #339933;">=</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #000066; font-weight: bold;">for</span> <span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">var</span> _len <span style="color: #339933;">=</span> arguments.<span style="color: #660066;">length</span><span style="color: #339933;">,</span> properties <span style="color: #339933;">=</span> <span style="">Array</span><span style="color: #009900;">&#40;</span>_len <span style="color: #339933;">&gt;</span> <span style="color: #CC0000;">1</span> <span style="color: #339933;">?</span> _len <span style="color: #339933;">-</span> <span style="color: #CC0000;">1</span> <span style="color: #339933;">:</span> <span style="color: #CC0000;">0</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> _key <span style="color: #339933;">=</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">;</span> _key <span style="color: #339933;">&lt;</span> _len<span style="color: #339933;">;</span> _key<span style="color: #339933;">++</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  properties<span style="color: #009900;">&#91;</span>_key <span style="color: #339933;">-</span> <span style="color: #CC0000;">1</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> arguments<span style="color: #009900;">&#91;</span>_key<span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> properties.<span style="color: #660066;">forEach</span><span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>value<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  <span style="color: #000066; font-weight: bold;">var</span> property <span style="color: #339933;">=</span> style.<span style="color: #660066;">getPropertyValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'-webkit-'</span> <span style="color: #339933;">+</span> value<span style="color: #009900;">&#41;</span> <span style="color: #339933;">||</span> style.<span style="color: #660066;">getPropertyValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'-moz-'</span> <span style="color: #339933;">+</span> value<span style="color: #009900;">&#41;</span> <span style="color: #339933;">||</span> style.<span style="color: #660066;">getPropertyValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'-ms-'</span> <span style="color: #339933;">+</span> value<span style="color: #009900;">&#41;</span> <span style="color: #339933;">||</span> style.<span style="color: #660066;">getPropertyValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'-o-'</span> <span style="color: #339933;">+</span> value<span style="color: #009900;">&#41;</span> <span style="color: #339933;">||</span> style.<span style="color: #660066;">getPropertyValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">''</span> <span style="color: #339933;">+</span> value<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  result.<span style="color: #660066;">push</span><span style="color: #009900;">&#40;</span>property<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #000066; font-weight: bold;">return</span> result.<span style="color: #660066;">join</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">' '</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li></ol></pre>
+                            </div>
+                        </div>
+                        <p>
+                            <b>Explanation:</b>&nbsp;&nbsp;Even the CSS
+                            <code class="w3-codespan">transition</code> is defined as following, </p>
+
+                        <div class="w3-display-container">
+                            <button class="w3-button w3-white w3-border cpbtn w3-display-topright" data-clipboard-target="#code3">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <div class="w3-small w3-theme-l5" style="overflow-x: scroll">
+                                <pre id="code3" class="sass" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">#xiuli <span style="color: #00AA00;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">      <span style="color: #0066ff;">-webkit-transition</span><span style="color: #00AA00;">:</span> all 2s linear 1s<span style="color: #00AA00;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">      <span style="color: #0066ff;">-moz-transition</span><span style="color: #00AA00;">:</span> all 2s linear 1s<span style="color: #00AA00;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">      <span style="color: #0066ff;">-o-transition</span><span style="color: #00AA00;">:</span> all 2s linear 1s<span style="color: #00AA00;">;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">      transition<span style="color: #00AA00;">:</span> all 2s linear 1s<span style="color: #00AA00;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #00AA00;">&#125;</span></div></li></ol></pre>
+                            </div>
+                        </div>
+
+                        <div class="w3-small w3-theme-l5" style="overflow-x: scroll">
+                            <pre class="sass" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">#xiuli <span style="color: #00AA00;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">      <span style="color: #0066ff;">-webkit-transition</span><span style="color: #00AA00;">:</span> all 2s linear 1s<span style="color: #00AA00;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">      <span style="color: #0066ff;">-moz-transition</span><span style="color: #00AA00;">:</span> all 2s linear 1s<span style="color: #00AA00;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">      <span style="color: #0066ff;">-o-transition</span><span style="color: #00AA00;">:</span> all 2s linear 1s<span style="color: #00AA00;">;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">      transition<span style="color: #00AA00;">:</span> all 2s linear 1s<span style="color: #00AA00;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #00AA00;">&#125;</span></div></li></ol></pre>
+                        </div>
+                        <p>When to try to get transition using
+                            <code class="w3-codespan">transition</code> in you javascript code, you will endup with following results</p>
+                        <div class="w3-small w3-theme-l5" style="overflow-x: scroll">
+                            <pre class="javascript" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #006600; font-style: italic;">// chrome, safari</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #3366CC;">&quot;transition&quot;</span> <span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;all 2s linear 1s&quot;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #3366CC;">&quot;transition-delay&quot;</span> <span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;1s&quot;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #3366CC;">&quot;transition-duration&quot;</span> <span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;2s&quot;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #3366CC;">&quot;transition-property&quot;</span> <span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;all&quot;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #3366CC;">&quot;transition-timing-function&quot;</span> <span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;linear&quot;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #006600; font-style: italic;">// firefox, opera</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #3366CC;">&quot;transition&quot;</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;&quot;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #3366CC;">&quot;transition-delay&quot;</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;1s&quot;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #3366CC;">&quot;transition-duration&quot;</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;2s&quot;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #3366CC;">&quot;transition-property&quot;</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;all&quot;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #3366CC;">&quot;transition-timing-function&quot;</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;linear&quot;</span></div></li></ol></pre>
+                        </div>
+                        <p>A workaround for this issue is to access each
+                            <code class="w3-codespan">transition</code> property seperatly.</p>
+                    </div>
+                </div>
+                <hr>
+                <!-- END BLOG ENTRIES -->
+            </div>
+
+            <!-- Introduction menu -->
+            <div class="w3-col l3">
+                <!-- Posts -->
+                <div class="w3-card w3-margin">
+                    <div class="w3-container w3-padding w3-theme-l3">
+                        <h4>Related Posts</h4>
+                    </div>
+                    <ul class="w3-ul w3-hoverable w3-white">
+                        <li class="w3-padding-16">
+                            <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                            <span class="w3-large">Lorem</span>
+                            <br>
+                            <span>Sed mattis nunc</span>
+                        </li>
+                        <li class="w3-padding-16">
+                            <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                            <span class="w3-large">Ipsum</span>
+                            <br>
+                            <span>Praes tinci sed</span>
+                        </li>
+                        <li class="w3-padding-16">
+                            <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                            <span class="w3-large">Dorum</span>
+                            <br>
+                            <span>Ultricies congue</span>
+                        </li>
+                        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+                            <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                            <span class="w3-large">Mingsum</span>
+                            <br>
+                            <span>Lorem ipsum dipsum</span>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Labels / tags -->
+                <div class="w3-card w3-margin">
+                    <div class="w3-container w3-padding">
+                        <h4>Tags</h4>
+                    </div>
+                    <div class="w3-container w3-white">
+                        <p>
+                            <span class="w3-tag w3-black w3-margin-bottom">Travel</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NORWAY</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Baby</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span>
+                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- END Introduction Menu -->
+            </div>
+
+            <!-- END GRID -->
+        </div>
+        <br>
+
+        <!-- END w3-content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme w3-padding-32 w3-margin-top">
+        <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+        <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+    </footer>
+    <script type="text/javascript" src="../../js/blog.min.js"></script>
+</body>
+
+</html>
