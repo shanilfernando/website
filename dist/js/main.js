@@ -1,22 +1,31 @@
 /*global Xiuli*/
-const xiuli = new Xiuli('xiuli', Xiuli.initializers.spiralRotated);
+const xiuli = new Xiuli('xiuli', Xiuli.initializers.spiralSteps);
 
 document.getElementById('btn1').onclick = ev => xiuli.goto('section1', ev);
 document.getElementById('btn2').onclick = ev => xiuli.goto('section2', ev);
 document.getElementById('btn3').onclick = ev => xiuli.goto('section3', ev);
 document.getElementById('btn4').onclick = ev => xiuli.goto('section4', ev);
 
-let slideIndex = 0;
+const indexes = {
+  slides1: 0,
+  slides2: 0
+};
 carousel();
 
 function carousel() {
+  animate('slides1', indexes);
+  animate('slides2', indexes);
+  setTimeout(carousel, 4000);
+}
+
+function animate(csClass, indexes) {
+  var x = document.getElementsByClassName(csClass);
   var i;
-  var x = document.getElementsByClassName('mySlides');
   for (i = 0; i < x.length; i++) {
     x[i].style.display = 'none';
   }
-  slideIndex++;
+  let slideIndex = indexes[csClass] + 1;
   if (slideIndex > x.length) { slideIndex = 1; }
   x[slideIndex - 1].style.display = 'block';
-  setTimeout(carousel, 4000);
+  indexes[csClass] = slideIndex;
 }
