@@ -1,10 +1,26 @@
+.bg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background:
+   /*  linear-gradient(10deg,transparent 20%, $primary 30%, $secondary 30%,transparent 60%), */
+    linear-gradient(50deg,transparent 10%, $primary 40%, $secondary 40%,transparent 70%),
+    linear-gradient(-10deg,transparent 30%, $primary 60%, $secondary 60%,transparent 90%),
+    linear-gradient(110deg, $primary 60%, $secondary 60%);
+    filter:blur(2px);
+}
+
+.w3-bar{
+    color:$light;
+}
 #root {
     overflow: hidden;
-    -webkit-perspective: 500px;
-    -moz-perspective: 500px;
     perspective: 500px;
     height: 100vh;
     position: relative;
+    
 }
 #xiuli {
     transition-timing-function: linear;
@@ -16,23 +32,23 @@
 #section4,
 #section5,
 #section6 {
-    width: 50vw;
-    min-width: 601px;
+    width: 60vw;
+    min-width:360px;
     height: 60vh;
     position: absolute;
     div{
-        width: 100%;
-        color: white;
-
+        color: $light;
     }
+    background: rgba($primary,0.2);
+    overflow: auto;
 }
 
 /* DEMO-SPECIFIC STYLES */
 .typewriter h2 {
-    color: #fff;
+    color: $light;
     font-family: monospace;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
+    border-right: .15em solid $action; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     animation: 
@@ -49,5 +65,18 @@
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange }
+    50% { border-color: $action }
+  }
+
+  .w3-button{
+    border-bottom: 2px solid transparent;
+  }
+  .w3-button:hover{
+    background-color: transparent !important;
+    color: $action !important;
+    border-bottom: 2px solid $action;
+  }
+
+  .full-width{
+      width: 100%;
   }
