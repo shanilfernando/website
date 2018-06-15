@@ -11,12 +11,17 @@ const indexes = {
   slides2: 0,
   typewriterline:0
 };
-carousel();
+slides1();
+setTimeout(slides2, 2000);
 typewriter();
-function carousel() {
+function slides1() {
   animate('slides1');
+  setTimeout(slides1, 4000);
+}
+
+function slides2() {
   animate('slides2');
-  setTimeout(carousel, 4000);
+  setTimeout(slides2, 4000);
 }
 
 function typewriter() {
