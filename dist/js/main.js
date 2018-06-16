@@ -5,6 +5,7 @@ document.getElementById('btn1').onclick = ev => xiuli.goto('section1', ev);
 document.getElementById('btn2').onclick = ev => xiuli.goto('section2', ev);
 document.getElementById('btn3').onclick = ev => xiuli.goto('section3', ev);
 document.getElementById('btn4').onclick = ev => xiuli.goto('section4', ev);
+document.getElementById('btn5').onclick = ev => xiuli.goto('section5', ev);
 
 const indexes = {
   slides1: 0,

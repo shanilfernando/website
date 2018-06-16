@@ -25,7 +25,7 @@
 }
 #root {
     overflow: hidden;
-    perspective: 500px;
+    perspective: 400px;
     height: 100vh;
     position: relative;
     
@@ -37,7 +37,9 @@
 #section1,
 #section2,
 #section3,
-#section4, {
+#section4,
+#section5,
+#section6, {
     width: 60vw;
     min-width:360px;
     height: 70vh;
@@ -48,9 +50,9 @@
     /* background: rgba($secondary,0.1); */
 }
 
-#section4 {
+/* #section4 {
     overflow: auto;
-}
+} */
 
 /* DEMO-SPECIFIC STYLES */
 .typewriter h2 {
