@@ -13,9 +13,9 @@
         height: 102vh;
         background:
    /*  linear-gradient(10deg,transparent 20%, $primary 30%, $secondary 30%,transparent 60%), */
-    linear-gradient(50deg,transparent 10%, $primary 40%, $secondary 40%,transparent 70%),
-    linear-gradient(-10deg,transparent 30%, $primary 60%, $secondary 60%,transparent 90%),
-    linear-gradient(110deg, $primary 60%, $secondary 60%);
+    linear-gradient(50deg,transparent 20%, $primary 50%, $secondary 50%,transparent 80%),
+    linear-gradient(-10deg,transparent 20%, $primary 50%, $secondary 50%,transparent 80%),
+    linear-gradient(110deg, $primary 70%, $secondary 70%);
     filter:blur(2px);
     }
 }
@@ -50,9 +50,10 @@
     /* background: rgba($secondary,0.1); */
 }
 
-/* #section4 {
-    overflow: auto;
-} */
+.profilepic{
+    width:100%;
+
+}
 
 /* DEMO-SPECIFIC STYLES */
 .typewriter h2 {
@@ -79,26 +80,44 @@
     50% { border-color: $action }
   }
 
-  .w3-button{
-    border-bottom: 2px solid transparent;
-  }
-  .w3-button:hover{
-    background-color: transparent !important;
-    color: $action !important;
-    border-bottom: 2px solid $action;
-  }
+  .w3-top, .w3-bottom {
+    .w3-button{
+        border-bottom: 2px solid transparent;
+        &:hover{
+            border-bottom: 2px solid $action !important;
+          }
+      }  
+      
+    }
+    .w3-button.w3-border:hover{
+        border-color: transparent !important;
+        border-bottom-color: $action !important;
+      }
+
+      .w3-button:hover{
+        background-color: transparent !important;
+        color: $action !important;
+      } 
+
+  
 
   .full-width{
       width: 100%;
   }
 
-  /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+  /* If the screen size is 601px wide or more*/
 @media screen and (min-width: 601px) {
 
   }
   
-  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  /* If the screen size is 600px wide or less*/
   @media screen and (max-width: 600px) {
+    .profilepic{
+        width:50%;
+    }
+    #section4 {
+        overflow: auto;
+    }
     .typewriterline{
         font-size:1rem;
     }
